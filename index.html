@@ -22,9 +22,81 @@
 
         </nav>
 
+        <div class="header-text">
+            <p>Game Developer</p>
+            <h1>Hi, I'm <span>Varun</span>  Wahi <br>From India</h1>
+        </div>
+
     </div>
 
 
+
 </div>
+
+<!-- ------------------about------------------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident libero nostrum nihil veritatis officiis ratione harum ea tempora eius, unde eaque corrupti et non. At est officia laborum quia architecto! </p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Game Development</span><br>Developing 2D/3D Games on Unity</li>
+                        <li><span>Web Development</span><br>Developing Web Apps</li>
+                        <li><span>App Development</span><br>Developing Mobile Apps using Flutter</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Freelancing</span><br>2 Years as a Freelancing Game Developer</li>
+                        <li><span>Hacktober 2022</span><br>Open Source Contribution for 'Blogify' during Hacktoberfest 2022</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020</span><br>Passed 12th Grade with 92% Marks</li>
+                        <li><span>2021-25</span><br>B.Tech in Information Technology from UIT RGPV</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
