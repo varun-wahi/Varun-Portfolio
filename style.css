@@ -226,5 +226,5 @@ nav ul li a:hover::after {
 .work img {
     width: 100%;
     border-radius: 10px;
-    display: block;
+    width: 100%;
 }
